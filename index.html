@@ -27,7 +27,7 @@
   var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?25d36296c2d0f571af509445beecbc02";
+  hm.src = "https://hm.baidu.com/hm.js?e666d013b82854116bc37c32dd2f43e3";
   var s = document.getElementsByTagName("script")[0];
   s.parentNode.insertBefore(hm, s);
 })();
@@ -86,6 +86,212 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-watermark-by-android" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/04/19/watermark-by-android/" class="article-date">
+  <time datetime="2020-04-19T02:59:46.000Z" itemprop="datePublished">2020-04-19</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Android/">Android</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/19/watermark-by-android/">Android中添加背景水印，含WebView</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>绝密资料，必须加上水印背景以免外传，在Android中如何实现呢？分为普通背景水印和加载网页中添加水印。当然网页本身可以直接加，WebView加载下来直接就有了，这种方案我们不讨论，只讨论在WebView中追加。<br>先上效果图：  </p>
+<p><img src="/css/images/watermark_bg.jpeg" alt="普通背景水印">  </p>
+<p><img src="/css/images/watermark_webview.jpeg" alt="网页水印"></p>
+<h4 id="普通背景水印"><a href="#普通背景水印" class="headerlink" title="普通背景水印"></a>普通背景水印</h4><h6 id="转载请标明出处："><a href="#转载请标明出处：" class="headerlink" title="转载请标明出处："></a>转载请标明出处：</h6><h6 id="http-blog-520wa-com"><a href="#http-blog-520wa-com" class="headerlink" title="http://blog.520wa.com/"></a><a href="http://blog.520wa.com/">http://blog.520wa.com/</a></h6><h6 id="本文出自Tu’s-blog"><a href="#本文出自Tu’s-blog" class="headerlink" title="本文出自Tu’s blog"></a>本文出自Tu’s blog</h6>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://blog.520wa.com/2020/04/19/watermark-by-android/" data-id="ck96jz3vu00174cdeutnsg6q5" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/WebView水印/">WebView水印</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/watermark/">watermark</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/水印/">水印</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/网页水印/">网页水印</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-use_mockjs_vue" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/04/08/use_mockjs_vue/" class="article-date">
+  <time datetime="2020-04-08T14:11:48.000Z" itemprop="datePublished">2020-04-08</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Web/">Web</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/08/use_mockjs_vue/">VUE中使用Mock模拟数据请求</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>是<br><a href="https://github.com/nuysoft/Mock" target="_blank" rel="noopener">Mock.js</a> 是一款模拟数据生成器，旨在帮助前端攻城师独立于后端进行开发，帮助编写单元测试。提供了以下模拟功能：</p>
+<ul>
+<li>根据数据模板生成模拟数据</li>
+<li>模拟 Ajax 请求，生成并返回模拟数据</li>
+<li>基于 HTML 模板生成模拟数据</li>
+</ul>
+<p>记录一下在项目中的使用方法</p>
+<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span> mockjs</span><br></pre></td></tr></table></figure>
+<p>当然通常在项目中会在package.json中添加mockjs依赖，再npm install所有项目中需要依赖的库</p>
+<figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"dependencies"</span>: &#123;</span><br><span class="line">    <span class="string">"mockjs"</span>: <span class="string">"^1.1.0"</span></span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<h4 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h4><p>src/mock/index.js<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//引入mock</span></span><br><span class="line"><span class="keyword">import</span> Mock <span class="keyword">from</span> <span class="string">'mockjs'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> configArray = []</span><br><span class="line"><span class="comment">// 使用webpack的require.context()遍历所有mock文件</span></span><br><span class="line"><span class="keyword">const</span> files = <span class="built_in">require</span>.context(<span class="string">'.'</span>, <span class="literal">true</span>, /\.js$/)</span><br><span class="line">files.keys().forEach(<span class="function">(<span class="params">key</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">if</span> (key === <span class="string">'./index.js'</span>) <span class="keyword">return</span></span><br><span class="line">  configArray = configArray.concat(files(key).default)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 设置拦截ajax请求的相应时间</span></span><br><span class="line">Mock.setup(&#123;</span><br><span class="line">  timeout: <span class="string">'200-600'</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 注册所有的mock服务</span></span><br><span class="line">configArray.forEach(<span class="function">(<span class="params">item</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">const</span> [path, target] <span class="keyword">of</span> <span class="built_in">Object</span>.entries(item)) &#123;</span><br><span class="line">    <span class="keyword">const</span> protocol = path.split(<span class="string">'|'</span>)</span><br><span class="line">    Mock.mock(protocol[<span class="number">1</span>], protocol[<span class="number">0</span>], target)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<p>main.js中引入</p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//开发环境引入</span></span><br><span class="line"><span class="built_in">if</span> (<span class="built_in">process</span>.env.NODE_ENV === <span class="string">'development'</span>) &#123;</span><br><span class="line">  require(<span class="string">'@/mock'</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>mock文件下建立personList.js<br><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> personList = [&#123;</span><br><span class="line">        id: <span class="number">1</span>,</span><br><span class="line">        name: <span class="string">'小丽'</span>,</span><br><span class="line">        age: <span class="string">'18'</span>,</span><br><span class="line">        <span class="built_in">number</span>: <span class="string">'8'</span></span><br><span class="line">    &#125;,&#123;</span><br><span class="line">        id: <span class="number">1</span>,</span><br><span class="line">        name: <span class="string">'小芳'</span>,</span><br><span class="line">        age: <span class="string">'20'</span>,</span><br><span class="line">        <span class="built_in">number</span>: <span class="string">'6'</span></span><br><span class="line">    &#125;]</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">    <span class="string">'get|/parameter/query'</span>:  <span class="function"><span class="params">option</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      status: <span class="number">200</span>,</span><br><span class="line">      message: <span class="string">'success'</span>,</span><br><span class="line">      data: personList</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>接下来在网络请求时，发现如果是get请求路径是/parameter/query，就会返回我们mock定义好的数据。另外还有其它语法来生成随机数据。详细参考<a href="http://mockjs.com/0.1/#%E6%95%B0%E6%8D%AE%E6%A8%A1%E6%9D%BF%E5%AE%9A%E4%B9%89%20DTD" target="_blank" rel="noopener">数据模板定义 DTD</a></p>
+<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p> <a href="http://mockjs.com" target="_blank" rel="noopener">Mock.js</a><br> <a href="https://github.com/nuysoft/Mock" target="_blank" rel="noopener">Mock</a></p>
+<h6 id="转载请标明出处："><a href="#转载请标明出处：" class="headerlink" title="转载请标明出处："></a>转载请标明出处：</h6><h6 id="http-blog-520wa-com"><a href="#http-blog-520wa-com" class="headerlink" title="http://blog.520wa.com/"></a><a href="http://blog.520wa.com/">http://blog.520wa.com/</a></h6><h6 id="本文出自Tu’s-blog"><a href="#本文出自Tu’s-blog" class="headerlink" title="本文出自Tu’s blog"></a>本文出自Tu’s blog</h6>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://blog.520wa.com/2020/04/08/use_mockjs_vue/" data-id="ck96jz3vv00184cdec0xrp56o" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mock/">Mock</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mockjs/">mockjs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/">vue</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-annotation-proccor-by-gradle4-7" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/04/04/annotation-proccor-by-gradle4-7/" class="article-date">
+  <time datetime="2020-04-04T14:16:28.000Z" itemprop="datePublished">2020-04-04</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Android/">Android</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/04/annotation-proccor-by-gradle4-7/">annotationProcessor 引用后编译时不生效问题</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="Gradle升级后Processor无法在编译时生效"><a href="#Gradle升级后Processor无法在编译时生效" class="headerlink" title="Gradle升级后Processor无法在编译时生效"></a>Gradle升级后Processor无法在编译时生效</h4><p>升级<a href="https://github.com/2tu/fit" target="_blank" rel="noopener">fit</a>后忽然发现在annotaionProcessor后编译并没有生成。原因在哪里呢？将fit库的gradle版本从4.6升级到了5.6.4，原来从gradle4.7开始不再帮助生成，需要我们自己在库中解决。    </p>
+<h4 id="两种方案"><a href="#两种方案" class="headerlink" title="两种方案"></a>两种方案</h4>
+        
+          <p class="article-more-link">
+            <a href="/2020/04/04/annotation-proccor-by-gradle4-7/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://blog.520wa.com/2020/04/04/annotation-proccor-by-gradle4-7/" data-id="ck96jz3uv000d4cde5iri14j5" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AutoService/">AutoService</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Gradle/">Gradle</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/annotationProcessor/">annotationProcessor</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-enum-serializer-by-Gson" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/01/08/enum-serializer-by-Gson/" class="article-date">
+  <time datetime="2020-01-08T14:16:28.000Z" itemprop="datePublished">2020-01-08</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Java/">Java</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/01/08/enum-serializer-by-Gson/">Gson序列化、反序列化枚举</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="后端返回了N多枚举，前端Gson解析报错？"><a href="#后端返回了N多枚举，前端Gson解析报错？" class="headerlink" title="后端返回了N多枚举，前端Gson解析报错？"></a>后端返回了N多枚举，前端Gson解析报错？</h4><p>后端接口返回很多枚举，Android复用实体，解析时却报错  </p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">com<span class="selector-class">.google</span><span class="selector-class">.gson</span><span class="selector-class">.JsonSyntaxException</span>: java<span class="selector-class">.lang</span><span class="selector-class">.IllegalStateException</span>: </span><br><span class="line">Expected <span class="selector-tag">a</span> string but was BEGIN_OBJECT at line <span class="number">1</span> column <span class="number">70</span> path $<span class="selector-class">.data</span><span class="selector-class">.type</span></span><br></pre></td></tr></table></figure>
+<p>先定义一个枚举例子  Type.java  </p>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">enum</span> <span class="keyword">Type</span>&#123;</span><br><span class="line">	GSON(<span class="number">0</span>, <span class="string">"Gson"</span>),</span><br><span class="line">	JACKSON(<span class="number">1</span>, <span class="string">"Jackson"</span>),</span><br><span class="line">	FASTJSON(<span class="number">2</span>, <span class="string">"FastJson"</span>);</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">final</span> <span class="built_in">int</span> code;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">final</span> String <span class="keyword">name</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">Type</span>(<span class="built_in">int</span> code, String <span class="keyword">name</span>)&#123;</span><br><span class="line">		this.code = code;</span><br><span class="line">		this.<span class="keyword">name</span> = <span class="keyword">name</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">public</span> static <span class="keyword">Type</span> code(<span class="built_in">int</span> code)&#123;</span><br><span class="line">		for (<span class="keyword">Type</span> i : <span class="keyword">Type</span>.values())&#123;</span><br><span class="line">			<span class="keyword">if</span>(i.code() == code)&#123;</span><br><span class="line">				<span class="keyword">return</span> i;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> null;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">public</span> static <span class="keyword">Type</span> <span class="keyword">name</span>(String <span class="keyword">name</span>)&#123;</span><br><span class="line">		for (<span class="keyword">Type</span> i : <span class="keyword">Type</span>.values())&#123;</span><br><span class="line">			<span class="keyword">if</span>(i.<span class="keyword">name</span>().equals(<span class="keyword">name</span>))&#123;</span><br><span class="line">				<span class="keyword">return</span> i;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> null;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">public</span> <span class="built_in">int</span> code()&#123;</span><br><span class="line">		<span class="keyword">return</span> code;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">public</span> String <span class="keyword">name</span>()&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">name</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在序列化时服务端有两种试返回<br>1、完整返回枚举</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="attr">"type"</span>:&#123;<span class="attr">"code"</span>:<span class="number">0</span>,<span class="attr">"name"</span>:<span class="string">"Gson"</span>&#125;&#125;</span><br></pre></td></tr></table></figure>
+<p>2、序列化code或name</p>
+<figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="string">"type"</span>:<span class="number">0</span>&#125;</span><br><span class="line">//&#123;<span class="string">"type"</span>:<span class="string">"Gson"</span>&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="最好的解决办法——解决提出问题的人"><a href="#最好的解决办法——解决提出问题的人" class="headerlink" title="最好的解决办法——解决提出问题的人"></a>最好的解决办法——解决提出问题的人</h4><p>很不幸后端是我负责的，所以我们有三个解决方法<br>1、让前端自己解决<br>2、为前端提供技术方案<br>3、修改后端枚举<br>我应该怎么办？<br>以上，当然是认怂，直接奉上代码喽<br>Json是一种广泛使用的数据交换格式，在Java中序列化和反序列化的各API名称也都类似，下面正式介绍Gson如何序列化、反序列化枚举  </p>
+        
+          <p class="article-more-link">
+            <a href="/2020/01/08/enum-serializer-by-Gson/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://blog.520wa.com/2020/01/08/enum-serializer-by-Gson/" data-id="ck96jz3v6000l4cdest2cipjj" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Gson-serialization-deserialization-enum/">Gson serialization/deserialization enum</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Gson反序列化枚举/">Gson反序列化枚举</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Gson序列化枚举/">Gson序列化枚举</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JsonDeserializer/">JsonDeserializer</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JsonSerializer/">JsonSerializer</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/registerTypeAdapter/">registerTypeAdapter</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-feign-upload-file" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/11/22/feign-upload-file/" class="article-date">
@@ -126,7 +332,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://blog.520wa.com/2019/11/22/feign-upload-file/" data-id="ck3a6xz8p000ko1depseq4v9m" class="article-share-link">Share</a>
+      <a data-url="https://blog.520wa.com/2019/11/22/feign-upload-file/" data-id="ck96jz3va000o4cdedwtoifog" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/FeignClient/">FeignClient</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/FormEncoder/">FormEncoder</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/feign-form/">feign-form</a></li></ul>
@@ -176,7 +382,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://blog.520wa.com/2019/09/12/antd-init/" data-id="ck3a6xz8b000ao1desxzjgwig" class="article-share-link">Share</a>
+      <a data-url="https://blog.520wa.com/2019/09/12/antd-init/" data-id="ck96jz3ux000e4cdenp8ss7i3" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/antd-init/">antd-init</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/create-umi/">create-umi</a></li></ul>
@@ -225,7 +431,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://blog.520wa.com/2019/05/16/fix-Unknown-pattern-character-x/" data-id="ck3a6xz8r000mo1de1vki01oi" class="article-share-link">Share</a>
+      <a data-url="https://blog.520wa.com/2019/05/16/fix-Unknown-pattern-character-x/" data-id="ck96jz3v8000n4cde4jvidqca" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SimpleDateFormat/">SimpleDateFormat</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Time-Zone/">Time Zone</a></li></ul>
@@ -276,7 +482,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://blog.520wa.com/2019/05/09/how-to-request-other-permissions/" data-id="ck3a6xz8x000ro1de6ygboj81" class="article-share-link">Share</a>
+      <a data-url="https://blog.520wa.com/2019/05/09/how-to-request-other-permissions/" data-id="ck96jz3vg000t4cde83op0hd3" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/权限/">权限</a></li></ul>
@@ -326,7 +532,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://blog.520wa.com/2019/04/30/u-know-bluetooth-and-wireless/" data-id="ck3a6xz990012o1derqpvnikh" class="article-share-link">Share</a>
+      <a data-url="https://blog.520wa.com/2019/04/30/u-know-bluetooth-and-wireless/" data-id="ck96jz3vr00134cde301vnnzq" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/WIFI/">WIFI</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/智能硬件/">智能硬件</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/蓝牙/">蓝牙</a></li></ul>
@@ -379,214 +585,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://blog.520wa.com/2019/04/23/assert-facepay-dragonfly-by-4/" data-id="ck3a6xz8d000bo1dexy68iof4" class="article-share-link">Share</a>
+      <a data-url="https://blog.520wa.com/2019/04/23/assert-facepay-dragonfly-by-4/" data-id="ck96jz3ur000a4cdeufudfmwv" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/人脸支付/">人脸支付</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/蜻蜓/">蜻蜓</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-ndksamples-camera-basic" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/03/05/ndksamples-camera-basic/" class="article-date">
-  <time datetime="2019-03-05T09:40:44.000Z" itemprop="datePublished">2019-03-05</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/NDK-Samples/">NDK Samples</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/05/ndksamples-camera-basic/">NDK Samples学习 [6-1] - camera之basic</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="https://github.com/googlesamples/android-ndk/tree/master/camera/basic/" target="_blank" rel="noopener">camera-basic</a><br><a href="https://github.com/googlesamples/android-ndk/blob/master/camera/README.md" target="_blank" rel="noopener">README</a><br>该项目演示如何使用c创建camera拍照、预览。</p>
-<hr>
-<p>最低要求：</p>
-<ol>
-<li>Android Studio 2.3.0+ ,NDK r15+</li>
-<li>Android-24+</li>
-</ol>
-<hr>
-<p>项目主要流程：</p>
-<ol>
-<li>获取权限</li>
-<li>初始化界面，NDKCamera、曝光度、感光度</li>
-<li>操作相机，调整曝光度、感光度预览；拍照保存</li>
-</ol>
-        
-          <p class="article-more-link">
-            <a href="/2019/03/05/ndksamples-camera-basic/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://blog.520wa.com/2019/03/05/ndksamples-camera-basic/" data-id="ck3a6xz8z000to1dep3pyraqx" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ndk-camera/">ndk camera</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-cpp-constructor-rule" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/02/14/cpp-constructor-rule/" class="article-date">
-  <time datetime="2019-02-14T06:52:13.000Z" itemprop="datePublished">2019-02-14</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/C/">C++</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/02/14/cpp-constructor-rule/">C++构造函数设计原理</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>构造函数，我们通常看到的如下<br><figure class="highlight llvm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Point(void)&#123;</span><br><span class="line">    <span class="keyword">x</span> = <span class="number">0.0</span><span class="comment">;</span></span><br><span class="line"><span class="comment">    y = 0.0;</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">Point(double xP, double yP)&#123;</span></span><br><span class="line"><span class="comment">    x = xP;</span></span><br><span class="line"><span class="comment">    y = yP;</span></span><br><span class="line"><span class="comment">&#125;</span></span><br></pre></td></tr></table></figure></p>
-<p>与函数相比没有返回值部份（连void也没有），且与构造函数名与类名称相同。<br>
-        
-          <p class="article-more-link">
-            <a href="/2019/02/14/cpp-constructor-rule/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://blog.520wa.com/2019/02/14/cpp-constructor-rule/" data-id="ck3a6xz8g000do1dewi8d09an" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/构造函数/">构造函数</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-template-multiple-typename" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/01/23/template-multiple-typename/" class="article-date">
-  <time datetime="2019-01-23T08:44:14.000Z" itemprop="datePublished">2019-01-23</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/C/">C++</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/01/23/template-multiple-typename/">C++模板多类型形参</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>C++模板与Java泛型有共通之处，为了参数化代码。所以也疑惑C++中的类模板是否与Java泛型相同只能指定一个类型？<br>C++模板格式<br>1、 函数模板格式<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T1, <span class="keyword">typename</span> T2, ...&gt; 返回类型 函数名(参数列表)&#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>2、类模板格式<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T1, <span class="keyword">typename</span> T2, ...&gt; <span class="class"><span class="keyword">class</span> 类名&#123;</span></span><br><span class="line">    ...</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
-        
-          <p class="article-more-link">
-            <a href="/2019/01/23/template-multiple-typename/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://blog.520wa.com/2019/01/23/template-multiple-typename/" data-id="ck3a6xz970010o1deck6w6dhr" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/多形参/">多形参</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/模板/">模板</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-cpp-overload-default-param" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/01/18/cpp-overload-default-param/" class="article-date">
-  <time datetime="2019-01-18T07:15:27.000Z" itemprop="datePublished">2019-01-18</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/C/">C++</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/01/18/cpp-overload-default-param/">C++重载默认参数函数问题？</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>函数重载以参数类型和参数个数不同区分。如:<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> m1, <span class="keyword">int</span> m2)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> m1, <span class="keyword">int</span> m2, <span class="keyword">int</span> m3)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> m1, <span class="keyword">int</span> m2, <span class="keyword">int</span> m3, <span class="keyword">int</span> m4)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">add</span><span class="params">(<span class="keyword">char</span> m1, <span class="keyword">char</span> m2)</span></span>;</span><br></pre></td></tr></table></figure></p>
-<p>以上程序大家都没有什么疑惑。那么下面的程序呢？<br>
-        
-          <p class="article-more-link">
-            <a href="/2019/01/18/cpp-overload-default-param/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://blog.520wa.com/2019/01/18/cpp-overload-default-param/" data-id="ck3a6xz8h000eo1depw6ze963" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/重载默认参数函数/">重载默认参数函数</a></li></ul>
 
     </footer>
   </div>
@@ -608,7 +610,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Android/">Android</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C++</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/NDK-Samples/">NDK Samples</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/其它/">其它</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端/">前端</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据/">数据</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/统计学/">统计学</a><span class="category-list-count">2</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Android/">Android</a><span class="category-list-count">15</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C++</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/NDK-Samples/">NDK Samples</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web/">Web</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/其它/">其它</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端/">前端</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据/">数据</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/统计学/">统计学</a><span class="category-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -619,7 +621,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/02-00-00-00-00-00/" style="font-size: 10px;">02:00:00:00:00:00</a> <a href="/tags/301/" style="font-size: 10px;">301</a> <a href="/tags/302/" style="font-size: 10px;">302</a> <a href="/tags/APKParser/" style="font-size: 10px;">APKParser</a> <a href="/tags/AXMLPrinter2/" style="font-size: 10px;">AXMLPrinter2</a> <a href="/tags/Activity/" style="font-size: 10px;">Activity</a> <a href="/tags/Android-TV/" style="font-size: 10px;">Android TV</a> <a href="/tags/AndroidStudio/" style="font-size: 10px;">AndroidStudio</a> <a href="/tags/Arithmetic/" style="font-size: 10px;">Arithmetic</a> <a href="/tags/Bean/" style="font-size: 10px;">Bean</a> <a href="/tags/Butterknife/" style="font-size: 10px;">Butterknife</a> <a href="/tags/C/" style="font-size: 10px;">C++</a> <a href="/tags/DataBinding/" style="font-size: 10px;">DataBinding</a> <a href="/tags/DateFormat/" style="font-size: 10px;">DateFormat</a> <a href="/tags/Debugger/" style="font-size: 10px;">Debugger</a> <a href="/tags/DownloadManager/" style="font-size: 10px;">DownloadManager</a> <a href="/tags/Excel/" style="font-size: 10px;">Excel</a> <a href="/tags/FeignClient/" style="font-size: 10px;">FeignClient</a> <a href="/tags/FormEncoder/" style="font-size: 10px;">FormEncoder</a> <a href="/tags/Gradle/" style="font-size: 20px;">Gradle</a> <a href="/tags/How-compress/" style="font-size: 10px;">How compress</a> <a href="/tags/Http-Status-Code/" style="font-size: 10px;">Http Status Code</a> <a href="/tags/HttpClient/" style="font-size: 10px;">HttpClient</a> <a href="/tags/Huffman/" style="font-size: 10px;">Huffman</a> <a href="/tags/JNI/" style="font-size: 10px;">JNI</a> <a href="/tags/Java数据分析房价/" style="font-size: 10px;">Java数据分析房价</a> <a href="/tags/Jenkins/" style="font-size: 10px;">Jenkins</a> <a href="/tags/JitPack/" style="font-size: 10px;">JitPack</a> <a href="/tags/NODE-ENV/" style="font-size: 10px;">NODE_ENV</a> <a href="/tags/Native/" style="font-size: 10px;">Native</a> <a href="/tags/NetworkInterface/" style="font-size: 10px;">NetworkInterface</a> <a href="/tags/NullPointException/" style="font-size: 10px;">NullPointException</a> <a href="/tags/Qualifier/" style="font-size: 10px;">Qualifier</a> <a href="/tags/RestTemplate/" style="font-size: 10px;">RestTemplate</a> <a href="/tags/RestoreInstance/" style="font-size: 10px;">RestoreInstance</a> <a href="/tags/SDK/" style="font-size: 10px;">SDK</a> <a href="/tags/SDK更新给开发者/" style="font-size: 10px;">SDK更新给开发者</a> <a href="/tags/SimpleDateFormat/" style="font-size: 10px;">SimpleDateFormat</a> <a href="/tags/Spring/" style="font-size: 20px;">Spring</a> <a href="/tags/SpringBatch/" style="font-size: 10px;">SpringBatch</a> <a href="/tags/StepScope/" style="font-size: 10px;">StepScope</a> <a href="/tags/Time-Zone/" style="font-size: 10px;">Time Zone</a> <a href="/tags/TingPNG/" style="font-size: 10px;">TingPNG</a> <a href="/tags/TransformException/" style="font-size: 10px;">TransformException</a> <a href="/tags/WEBGL-debug-renderer-info/" style="font-size: 10px;">WEBGL_debug_renderer_info</a> <a href="/tags/WIFI/" style="font-size: 10px;">WIFI</a> <a href="/tags/WebGL/" style="font-size: 10px;">WebGL</a> <a href="/tags/WebView/" style="font-size: 20px;">WebView</a> <a href="/tags/WifiInfo/" style="font-size: 10px;">WifiInfo</a> <a href="/tags/YYYY/" style="font-size: 10px;">YYYY</a> <a href="/tags/object-Object/" style="font-size: 10px;">[object Object]</a> <a href="/tags/antd-init/" style="font-size: 10px;">antd-init</a> <a href="/tags/applicaton/" style="font-size: 10px;">applicaton</a> <a href="/tags/brew/" style="font-size: 10px;">brew</a> <a href="/tags/chrome/" style="font-size: 10px;">chrome</a> <a href="/tags/crash/" style="font-size: 10px;">crash</a> <a href="/tags/create-umi/" style="font-size: 10px;">create-umi</a> <a href="/tags/cross-env/" style="font-size: 10px;">cross-env</a> <a href="/tags/dependencies/" style="font-size: 10px;">dependencies</a> <a href="/tags/dummy0/" style="font-size: 10px;">dummy0</a> <a href="/tags/duplicate-entry/" style="font-size: 10px;">duplicate entry</a> <a href="/tags/experimental-webgl/" style="font-size: 10px;">experimental-webgl</a> <a href="/tags/feign-form/" style="font-size: 10px;">feign-form</a> <a href="/tags/fit/" style="font-size: 10px;">fit</a> <a href="/tags/flavor/" style="font-size: 10px;">flavor</a> <a href="/tags/github-api/" style="font-size: 10px;">github api</a> <a href="/tags/iOS/" style="font-size: 20px;">iOS</a> <a href="/tags/install/" style="font-size: 10px;">install</a> <a href="/tags/ipv4/" style="font-size: 10px;">ipv4</a> <a href="/tags/ipv6/" style="font-size: 10px;">ipv6</a> <a href="/tags/jpeg/" style="font-size: 10px;">jpeg</a> <a href="/tags/libjpeg/" style="font-size: 10px;">libjpeg</a> <a href="/tags/libjpeg-turbo/" style="font-size: 10px;">libjpeg-turbo</a> <a href="/tags/mac/" style="font-size: 10px;">mac</a> <a href="/tags/manifest/" style="font-size: 10px;">manifest</a> <a href="/tags/module/" style="font-size: 10px;">module</a> <a href="/tags/ndk-camera/" style="font-size: 10px;">ndk camera</a> <a href="/tags/onActivityForResult/" style="font-size: 10px;">onActivityForResult</a> <a href="/tags/onPageFinished/" style="font-size: 10px;">onPageFinished</a> <a href="/tags/scope/" style="font-size: 10px;">scope</a> <a href="/tags/spawn/" style="font-size: 10px;">spawn</a> <a href="/tags/storage/" style="font-size: 10px;">storage</a> <a href="/tags/transformClassesWithJarMerging/" style="font-size: 10px;">transformClassesWithJarMerging</a> <a href="/tags/v36/" style="font-size: 10px;">v36</a> <a href="/tags/versionCode/" style="font-size: 10px;">versionCode</a> <a href="/tags/wlan0/" style="font-size: 10px;">wlan0</a> <a href="/tags/yyyy/" style="font-size: 10px;">yyyy</a> <a href="/tags/中位数/" style="font-size: 10px;">中位数</a> <a href="/tags/中程数/" style="font-size: 10px;">中程数</a> <a href="/tags/主动push/" style="font-size: 10px;">主动push</a> <a href="/tags/人脸支付/" style="font-size: 20px;">人脸支付</a> <a href="/tags/人脸比对效率/" style="font-size: 10px;">人脸比对效率</a> <a href="/tags/众数/" style="font-size: 10px;">众数</a> <a href="/tags/兼容问题/" style="font-size: 10px;">兼容问题</a> <a href="/tags/同步支付/" style="font-size: 10px;">同步支付</a> <a href="/tags/命名空间/" style="font-size: 10px;">命名空间</a> <a href="/tags/均值/" style="font-size: 10px;">均值</a> <a href="/tags/多形参/" style="font-size: 10px;">多形参</a> <a href="/tags/头文件/" style="font-size: 10px;">头文件</a> <a href="/tags/如何主动PUSH/" style="font-size: 10px;">如何主动PUSH</a> <a href="/tags/异步支付/" style="font-size: 10px;">异步支付</a> <a href="/tags/引流/" style="font-size: 10px;">引流</a> <a href="/tags/支付/" style="font-size: 10px;">支付</a> <a href="/tags/数据决策/" style="font-size: 10px;">数据决策</a> <a href="/tags/数据分析/" style="font-size: 10px;">数据分析</a> <a href="/tags/春运交通情况/" style="font-size: 10px;">春运交通情况</a> <a href="/tags/智能硬件/" style="font-size: 10px;">智能硬件</a> <a href="/tags/权限/" style="font-size: 10px;">权限</a> <a href="/tags/极差/" style="font-size: 10px;">极差</a> <a href="/tags/构造函数/" style="font-size: 10px;">构造函数</a> <a href="/tags/模板/" style="font-size: 10px;">模板</a> <a href="/tags/用户体验/" style="font-size: 10px;">用户体验</a> <a href="/tags/脸部特征计算/" style="font-size: 10px;">脸部特征计算</a> <a href="/tags/蓝牙/" style="font-size: 10px;">蓝牙</a> <a href="/tags/蜻蜓/" style="font-size: 10px;">蜻蜓</a> <a href="/tags/重载默认参数函数/" style="font-size: 10px;">重载默认参数函数</a>
+      <a href="/tags/02-00-00-00-00-00/" style="font-size: 10px;">02:00:00:00:00:00</a> <a href="/tags/301/" style="font-size: 10px;">301</a> <a href="/tags/302/" style="font-size: 10px;">302</a> <a href="/tags/APKParser/" style="font-size: 10px;">APKParser</a> <a href="/tags/AXMLPrinter2/" style="font-size: 10px;">AXMLPrinter2</a> <a href="/tags/Activity/" style="font-size: 10px;">Activity</a> <a href="/tags/Android-TV/" style="font-size: 10px;">Android TV</a> <a href="/tags/AndroidStudio/" style="font-size: 10px;">AndroidStudio</a> <a href="/tags/Arithmetic/" style="font-size: 10px;">Arithmetic</a> <a href="/tags/AutoService/" style="font-size: 10px;">AutoService</a> <a href="/tags/Bean/" style="font-size: 10px;">Bean</a> <a href="/tags/Butterknife/" style="font-size: 10px;">Butterknife</a> <a href="/tags/C/" style="font-size: 10px;">C++</a> <a href="/tags/DataBinding/" style="font-size: 10px;">DataBinding</a> <a href="/tags/DateFormat/" style="font-size: 10px;">DateFormat</a> <a href="/tags/Debugger/" style="font-size: 10px;">Debugger</a> <a href="/tags/DownloadManager/" style="font-size: 10px;">DownloadManager</a> <a href="/tags/Excel/" style="font-size: 10px;">Excel</a> <a href="/tags/FeignClient/" style="font-size: 10px;">FeignClient</a> <a href="/tags/FormEncoder/" style="font-size: 10px;">FormEncoder</a> <a href="/tags/Gradle/" style="font-size: 20px;">Gradle</a> <a href="/tags/Gson-serialization-deserialization-enum/" style="font-size: 10px;">Gson serialization/deserialization enum</a> <a href="/tags/Gson反序列化枚举/" style="font-size: 10px;">Gson反序列化枚举</a> <a href="/tags/Gson序列化枚举/" style="font-size: 10px;">Gson序列化枚举</a> <a href="/tags/How-compress/" style="font-size: 10px;">How compress</a> <a href="/tags/Http-Status-Code/" style="font-size: 10px;">Http Status Code</a> <a href="/tags/HttpClient/" style="font-size: 10px;">HttpClient</a> <a href="/tags/Huffman/" style="font-size: 10px;">Huffman</a> <a href="/tags/JNI/" style="font-size: 10px;">JNI</a> <a href="/tags/Java数据分析房价/" style="font-size: 10px;">Java数据分析房价</a> <a href="/tags/Jenkins/" style="font-size: 10px;">Jenkins</a> <a href="/tags/JitPack/" style="font-size: 10px;">JitPack</a> <a href="/tags/JsonDeserializer/" style="font-size: 10px;">JsonDeserializer</a> <a href="/tags/JsonSerializer/" style="font-size: 10px;">JsonSerializer</a> <a href="/tags/Mock/" style="font-size: 10px;">Mock</a> <a href="/tags/NODE-ENV/" style="font-size: 10px;">NODE_ENV</a> <a href="/tags/Native/" style="font-size: 10px;">Native</a> <a href="/tags/NetworkInterface/" style="font-size: 10px;">NetworkInterface</a> <a href="/tags/NullPointException/" style="font-size: 10px;">NullPointException</a> <a href="/tags/Qualifier/" style="font-size: 10px;">Qualifier</a> <a href="/tags/RestTemplate/" style="font-size: 10px;">RestTemplate</a> <a href="/tags/RestoreInstance/" style="font-size: 10px;">RestoreInstance</a> <a href="/tags/SDK/" style="font-size: 10px;">SDK</a> <a href="/tags/SDK更新给开发者/" style="font-size: 10px;">SDK更新给开发者</a> <a href="/tags/SimpleDateFormat/" style="font-size: 10px;">SimpleDateFormat</a> <a href="/tags/Spring/" style="font-size: 15px;">Spring</a> <a href="/tags/SpringBatch/" style="font-size: 10px;">SpringBatch</a> <a href="/tags/StepScope/" style="font-size: 10px;">StepScope</a> <a href="/tags/Time-Zone/" style="font-size: 10px;">Time Zone</a> <a href="/tags/TingPNG/" style="font-size: 10px;">TingPNG</a> <a href="/tags/TransformException/" style="font-size: 10px;">TransformException</a> <a href="/tags/WEBGL-debug-renderer-info/" style="font-size: 10px;">WEBGL_debug_renderer_info</a> <a href="/tags/WIFI/" style="font-size: 10px;">WIFI</a> <a href="/tags/WebGL/" style="font-size: 10px;">WebGL</a> <a href="/tags/WebView/" style="font-size: 15px;">WebView</a> <a href="/tags/WebView水印/" style="font-size: 10px;">WebView水印</a> <a href="/tags/WifiInfo/" style="font-size: 10px;">WifiInfo</a> <a href="/tags/YYYY/" style="font-size: 10px;">YYYY</a> <a href="/tags/object-Object/" style="font-size: 10px;">[object Object]</a> <a href="/tags/annotationProcessor/" style="font-size: 10px;">annotationProcessor</a> <a href="/tags/antd-init/" style="font-size: 10px;">antd-init</a> <a href="/tags/applicaton/" style="font-size: 10px;">applicaton</a> <a href="/tags/brew/" style="font-size: 10px;">brew</a> <a href="/tags/chrome/" style="font-size: 10px;">chrome</a> <a href="/tags/crash/" style="font-size: 10px;">crash</a> <a href="/tags/create-umi/" style="font-size: 10px;">create-umi</a> <a href="/tags/cross-env/" style="font-size: 10px;">cross-env</a> <a href="/tags/dependencies/" style="font-size: 10px;">dependencies</a> <a href="/tags/dummy0/" style="font-size: 10px;">dummy0</a> <a href="/tags/duplicate-entry/" style="font-size: 10px;">duplicate entry</a> <a href="/tags/experimental-webgl/" style="font-size: 10px;">experimental-webgl</a> <a href="/tags/feign-form/" style="font-size: 10px;">feign-form</a> <a href="/tags/fit/" style="font-size: 10px;">fit</a> <a href="/tags/flavor/" style="font-size: 10px;">flavor</a> <a href="/tags/github-api/" style="font-size: 10px;">github api</a> <a href="/tags/iOS/" style="font-size: 15px;">iOS</a> <a href="/tags/install/" style="font-size: 10px;">install</a> <a href="/tags/ipv4/" style="font-size: 10px;">ipv4</a> <a href="/tags/ipv6/" style="font-size: 10px;">ipv6</a> <a href="/tags/jpeg/" style="font-size: 10px;">jpeg</a> <a href="/tags/libjpeg/" style="font-size: 10px;">libjpeg</a> <a href="/tags/libjpeg-turbo/" style="font-size: 10px;">libjpeg-turbo</a> <a href="/tags/mac/" style="font-size: 10px;">mac</a> <a href="/tags/manifest/" style="font-size: 10px;">manifest</a> <a href="/tags/mockjs/" style="font-size: 10px;">mockjs</a> <a href="/tags/module/" style="font-size: 10px;">module</a> <a href="/tags/ndk-camera/" style="font-size: 10px;">ndk camera</a> <a href="/tags/onActivityForResult/" style="font-size: 10px;">onActivityForResult</a> <a href="/tags/onPageFinished/" style="font-size: 10px;">onPageFinished</a> <a href="/tags/registerTypeAdapter/" style="font-size: 10px;">registerTypeAdapter</a> <a href="/tags/scope/" style="font-size: 10px;">scope</a> <a href="/tags/spawn/" style="font-size: 10px;">spawn</a> <a href="/tags/storage/" style="font-size: 10px;">storage</a> <a href="/tags/transformClassesWithJarMerging/" style="font-size: 10px;">transformClassesWithJarMerging</a> <a href="/tags/v36/" style="font-size: 10px;">v36</a> <a href="/tags/versionCode/" style="font-size: 10px;">versionCode</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/watermark/" style="font-size: 10px;">watermark</a> <a href="/tags/wlan0/" style="font-size: 10px;">wlan0</a> <a href="/tags/yyyy/" style="font-size: 10px;">yyyy</a> <a href="/tags/中位数/" style="font-size: 10px;">中位数</a> <a href="/tags/中程数/" style="font-size: 10px;">中程数</a> <a href="/tags/主动push/" style="font-size: 10px;">主动push</a> <a href="/tags/人脸支付/" style="font-size: 15px;">人脸支付</a> <a href="/tags/人脸比对效率/" style="font-size: 10px;">人脸比对效率</a> <a href="/tags/众数/" style="font-size: 10px;">众数</a> <a href="/tags/兼容问题/" style="font-size: 10px;">兼容问题</a> <a href="/tags/同步支付/" style="font-size: 10px;">同步支付</a> <a href="/tags/命名空间/" style="font-size: 10px;">命名空间</a> <a href="/tags/均值/" style="font-size: 10px;">均值</a> <a href="/tags/多形参/" style="font-size: 10px;">多形参</a> <a href="/tags/头文件/" style="font-size: 10px;">头文件</a> <a href="/tags/如何主动PUSH/" style="font-size: 10px;">如何主动PUSH</a> <a href="/tags/异步支付/" style="font-size: 10px;">异步支付</a> <a href="/tags/引流/" style="font-size: 10px;">引流</a> <a href="/tags/支付/" style="font-size: 10px;">支付</a> <a href="/tags/数据决策/" style="font-size: 10px;">数据决策</a> <a href="/tags/数据分析/" style="font-size: 10px;">数据分析</a> <a href="/tags/春运交通情况/" style="font-size: 10px;">春运交通情况</a> <a href="/tags/智能硬件/" style="font-size: 10px;">智能硬件</a> <a href="/tags/权限/" style="font-size: 10px;">权限</a> <a href="/tags/极差/" style="font-size: 10px;">极差</a> <a href="/tags/构造函数/" style="font-size: 10px;">构造函数</a> <a href="/tags/模板/" style="font-size: 10px;">模板</a> <a href="/tags/水印/" style="font-size: 10px;">水印</a> <a href="/tags/用户体验/" style="font-size: 10px;">用户体验</a> <a href="/tags/网页水印/" style="font-size: 10px;">网页水印</a> <a href="/tags/脸部特征计算/" style="font-size: 10px;">脸部特征计算</a> <a href="/tags/蓝牙/" style="font-size: 10px;">蓝牙</a> <a href="/tags/蜻蜓/" style="font-size: 10px;">蜻蜓</a> <a href="/tags/重载默认参数函数/" style="font-size: 10px;">重载默认参数函数</a>
     </div>
   </div>
 
@@ -628,7 +630,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a><span class="archive-list-count">3</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a><span class="archive-list-count">3</span></li></ul>
     </div>
   </div>
 
@@ -640,23 +642,23 @@
       <ul>
         
           <li>
+            <a href="/2020/04/19/watermark-by-android/">Android中添加背景水印，含WebView</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/08/use_mockjs_vue/">VUE中使用Mock模拟数据请求</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/04/annotation-proccor-by-gradle4-7/">annotationProcessor 引用后编译时不生效问题</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/08/enum-serializer-by-Gson/">Gson序列化、反序列化枚举</a>
+          </li>
+        
+          <li>
             <a href="/2019/11/22/feign-upload-file/">使用FeignClient上传文件</a>
-          </li>
-        
-          <li>
-            <a href="/2019/09/12/antd-init/">使用antd-init创建第一个可以运行的ant design</a>
-          </li>
-        
-          <li>
-            <a href="/2019/05/16/fix-Unknown-pattern-character-x/">修复X转换Time Zone出错问题</a>
-          </li>
-        
-          <li>
-            <a href="/2019/05/09/how-to-request-other-permissions/">设置，你所不知道的权限</a>
-          </li>
-        
-          <li>
-            <a href="/2019/04/30/u-know-bluetooth-and-wireless/">蓝牙和WIFI在智能硬件中的应用</a>
           </li>
         
       </ul>
@@ -671,7 +673,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2019 Tu<br>
+      &copy; 2020 Tu<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
